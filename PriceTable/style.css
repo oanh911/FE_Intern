@@ -51,13 +51,13 @@ main > div[class|="tour"] {
   color: #99A9B5;
 }
 
-.tour-name {
+div[class*="tour-name"] {
   position: relative;
   width: 362px;
   height: 272px;
 }
 
-.tour-name p {
+div[class*="tour-name"] > p {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -85,7 +85,7 @@ main > div[class|="tour"] {
   margin-block-end: 0;
 }
 
-.tour-subtitle > p + p {
+.tour-subtitle > p:nth-child(2) {
   font-size: 14px;
   line-height: 25px;
   color: #99a9b5;
@@ -93,7 +93,13 @@ main > div[class|="tour"] {
   margin-block-start: 0;
 }
 
-.list-detail p {
+.list-detail ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-detail li {
   font-size: 16px;
   line-height: 50px;
   color: #5f727f;
@@ -102,7 +108,7 @@ main > div[class|="tour"] {
   margin-block-start: 0;
 }
 
-p.odd-item {
+li.odd-item {
   background-color: #F4F6F7;
 }
 
@@ -122,7 +128,7 @@ button {
   color: #2196f7;
 }
 
-.tour-ocean button:active {
+.tour-ocean button:hover {
   background-color: #2196f7;
   color: white;
 }
@@ -132,7 +138,7 @@ button {
   color: #6c136f;
 }
 
-.tour-mountain button:active {
+.tour-mountain button:hover {
   background-color: #6c136f;
   color: white;
 }
@@ -142,7 +148,7 @@ button {
   color: #32ad1e;
 }
 
-.tour-forest button:active {
+.tour-forest button:hover {
   background-color: #32ad1e;
   color: white;
 }
@@ -161,6 +167,10 @@ button {
   color: #ffffff;
   font-weight: 700;
   font-family: "Montserrat";
+}
+
+.new-mark > p {
+  margin-top: 8px;
 }
 
 @media screen and (max-width: 1206px){
@@ -188,3 +198,40 @@ button {
     width: 100%;
   }
 }
+
+.tour-ocean span {
+  color: #2196f7;
+}
+
+.tour-mountain span {
+  color: #d74498;
+}
+
+.tour-forest span {
+  color: #32ad1e;
+}
+
+.ocean-tour-name {
+  background: url(./images/ocean.png);
+}
+
+.mountain-tour-name {
+  background: url(./images/mountain.png);
+}
+
+.forest-tour-name {
+  background: url(./images/forest.png);
+}
+
+.mountain-tour-name > p:nth-child(2) {
+  top: 35%;
+}
+
+.mountain-tour-name > p:last-child {
+  font-size: 12px;
+  line-height: 25px;
+  color: #b6c6c9;
+  top: 58%;
+  letter-spacing: normal;
+}
+
