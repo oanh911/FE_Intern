@@ -1,27 +1,31 @@
-let fname = document.getElementById("fname");
-let femail = document.getElementById("femail");
-let fpassword = document.getElementById("fpassword");
-let frepassword = document.getElementById("frepassword");
-let fsubmit = document.getElementById("fsubmit");
+const fname = document.getElementById("fname");
+const femail = document.getElementById("femail");
+const fpassword = document.getElementById("fpassword");
+const frepassword = document.getElementById("frepassword");
+const fsubmit = document.getElementById("fsubmit");
 let validatedFname, validatedFemail, validatedFpassword, validatedFrepassword;
 
-let fnamePattern = /^([a-zA-Z0-9ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s]+)$/i;
-let femailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-let fpasswordUpperPattern = /[A-Z]/;
-let fpasswordLowerPattern = /[a-z]/;
+const fnamePattern = /^([a-zA-Z0-9ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s]+)$/i;
+const femailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+const fpasswordUpperPattern = /[A-Z]/;
+const fpasswordLowerPattern = /[a-z]/;
+
+fname.addEventListener("change", fnameValidate);
+femail.addEventListener("change", femailValidate);
+fpassword.addEventListener("change", fpasswordValidate);
+frepassword.addEventListener("change", frepasswordValidate);
+
+
 
 function formValidate(){
-  if (validatedFname === true || validatedFemail === true || validatedFpassword === true || validatedFrepassword === true) {
+  if (validatedFname && validatedFemail && validatedFpassword && validatedFrepassword) {
     alert("Đăng ký tài khoản thành công!");
     return true;
   }
-  else {
-    return false;
-  }
 }
 
-function fnameValidate(fnameInput){
-  if (fnameInput.value === "") {
+function fnameValidate(){
+  if (!this.value) {
     fname.nextElementSibling.innerHTML = "Vui lòng không bỏ trống trường này";
     fname.nextElementSibling.setAttribute("class", "wrong-input");
     fname.setAttribute("class", "wrong-input");
@@ -29,7 +33,7 @@ function fnameValidate(fnameInput){
     fsubmit.setAttribute("disabled", "");
   }
   else {
-    if (fnamePattern.test(fnameInput.value) === false) {
+    if (!fnamePattern.test(this.value)) {
     fname.nextElementSibling.innerHTML = "Vui lòng không sử dụng ký tự đặc biệt";
     fname.nextElementSibling.setAttribute("class", "wrong-input");
     fname.setAttribute("class", "wrong-input");
@@ -45,8 +49,8 @@ function fnameValidate(fnameInput){
   }
 }
 
-function femailValidate(femailInput){
-  if (femailInput.value === "") {
+function femailValidate(){
+  if (!this.value) {
     femail.nextElementSibling.innerHTML = "Vui lòng không bỏ trống trường này";
     femail.nextElementSibling.setAttribute("class", "wrong-input");
     femail.setAttribute("class", "wrong-input");
@@ -54,7 +58,7 @@ function femailValidate(femailInput){
     validatedFemail = false;
   }
   else {
-    if (femailPattern.test(femailInput.value) === false) {
+    if (!femailPattern.test(this.value)) {
       femail.nextElementSibling.innerHTML = "Vui lòng nhập đúng định dạng email";
       femail.nextElementSibling.setAttribute("class", "wrong-input");
       femail.setAttribute("class", "wrong-input");
@@ -70,8 +74,8 @@ function femailValidate(femailInput){
   }
 }
 
-function fpasswordValidate(fpasswordInput){
-  if (fpasswordInput.value === "") {
+function fpasswordValidate(){
+  if (!this.value) {
     fpassword.nextElementSibling.innerHTML = "Vui lòng không bỏ trống trường này";
     fpassword.nextElementSibling.setAttribute("class", "wrong-input");
     fpassword.setAttribute("class", "wrong-input");
@@ -79,7 +83,7 @@ function fpasswordValidate(fpasswordInput){
     validatedFpassword = false;
   }
   else {
-    if (fpasswordUpperPattern.test(fpasswordInput.value) === false || fpasswordLowerPattern.test(fpasswordInput.value) === false || (fpasswordInput.value.length < 8 && fpasswordInput.value.length > 32))
+    if (!fpasswordUpperPattern.test(this.value) || !fpasswordLowerPattern.test(this.value) || (this.value.length < 8 && this.value.length > 32))
     {
       fpassword.nextElementSibling.innerHTML = "Vui lòng sử dụng 8-32 kí tự, ít nhất 1 chữ hoa và 1 chữ thường";
       fpassword.nextElementSibling.setAttribute("class", "wrong-input");
@@ -96,8 +100,8 @@ function fpasswordValidate(fpasswordInput){
   }
 }
 
-function frepasswordValidate(frepasswordInput){
-  if (frepasswordInput.value !== fpassword.value) {
+function frepasswordValidate(){
+  if (this.value !== fpassword.value) {
     frepassword.nextElementSibling.innerHTML = "Vui lòng nhập khớp mật khẩu trên";
     frepassword.nextElementSibling.setAttribute("class", "wrong-input");
     frepassword.setAttribute("class", "wrong-input");
