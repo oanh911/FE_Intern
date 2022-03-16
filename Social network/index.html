@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@400;800&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Trang chủ</title>
+</head>
+<body>
+    <div id="main-page">
+        <div id="post">
+            <img src="./images/avt1.jpg">
+            <button id="creat-post-button">Bạn đang nghĩ gì?</button>
+        </div>
+
+        <div id="creat-post">
+            <p>Tạo bài viết</p>
+            <label>Tiêu đề:</label><input type="textarea" name="creat-post-title" placeholder="Nhập tiêu đề bài viết" value="">
+            <br>
+            <label>Nội dung:</label><input type="textarea" name="creat-post-body" placeholder="Nhập nội dung bài viết" value="">
+            <br>
+            <button id="cancel-post">Hủy</button>
+            <button id="post-post">Đăng</button>
+        </div>
+
+        <div id="post-list">
+
+        </div>
+    </div>
+    <div id="post-detail-page">
+
+    </div>
+
+    <script src="./javascript.js"></script>
+</body>
+</html>
