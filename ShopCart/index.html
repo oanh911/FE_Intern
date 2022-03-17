@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karma:wght@300&family=Montserrat:wght@300;700;900&family=Nunito:wght@300&family=Source+Sans+Pro:wght@300;400;600;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Shop Cart</title>
+</head>
+
+<body>
+  <header>
+    <div class="top-menu">
+      <div class="top-menu-content">
+        <div class="phone-number">
+          <i class="fa-solid fa-headphones"></i><span>+1 916-85-2235</span>
+        </div>
+        <div class="socials">
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-google-plus-g"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+          <a href=""><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><span>></span>My account</li>
+            <li><span>></span>FAQ</li>
+            <li><span>></span>Contact Us</li>
+            <li><span>></span>Newsletter Signup</li>
+            <li><span>></span>Shipping Terms</li>
+          </ul>
+        </div>
+        <div class="wishlist">
+          <button>My Wishlist</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-menu">
+      <div class="main-menu-content">
+        <div class="logo">
+          <img src="./images/logo.png" alt="logo">
+        </div>
+        <div class="main-menu-list">
+          <ul>
+            <li><button><a href="#">HOME</a></button></li>
+            <li><button><a href="#">PAGES</a></button></li>
+            <li><button><a href="#">BLOG</a></button></li>
+            <li><button><a href="#">PORTFOLIOS</a></button></li>
+            <li><button><a href="#">SHOP</a></button></li>
+            <li><button><a href="#">FEATURES</a></button></li>
+            <li><button><a href="#">ELEMENTS</a></button></li>
+          </ul>
+        </div>
+        <div class="extension">
+          <div class="extension-list">
+            <i class="fa-solid fa-language"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-tag"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="title">
+      <div class="title-content">
+        <div class="cart-title"><span>WOO</span>CART</div>
+        <div class="cart">
+          <i class="fa-solid fa-cart-shopping fa-7x"></i>
+        </div>
+        <div class="breadcrumbs">
+          <ul>
+            <li>Home<span><i class="fa-solid fa-arrow-right-long"></i></span></li>
+            <li>Breadcrumbs Example<span><i class="fa-solid fa-arrow-right-long"></i></span></li>
+            <li>Second Level<span><i class="fa-solid fa-arrow-right-long"></i></span></li>
+            <li>Third level</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="your-cart">
+      <p class="your-cart-title">You Have <span>6 Items</span> In Your Cart</p>
+      <table>
+        <tr class="table-title">
+          <th style="width: 55%">PRODUCT</th>
+          <th style="width: 15%">PRICE</th>
+          <th style="width: 15%">QUANTITY</th>
+          <th style="width: 15%">TOTAL</th>
+        </tr>
+        <tr class="product">
+          <td>
+            <i class="fa-solid fa-circle-xmark"></i>
+            <img src="./images/product.jpg" alt="product-image" width="60px" height="60px">
+            <p class="product-name">Vans Authentic 44 Dx Classic White</p>
+            <p class="product-detail">Size: Large, Color: White</p>
+          </td>
+          <td>
+            <p>$35.99</p>
+          </td>
+          <td>
+            <button>-</button>
+            <p class="quantity">1</p>
+            <button>+</button>
+          </td>
+          <td>
+            <p>$35.99</p>
+          </td>
+        </tr>
+        <tr class="product">
+          <td>
+            <i class="fa-solid fa-circle-xmark"></i>
+            <img src="./images/product.jpg" alt="product-image" width="60px" height="60px">
+            <p class="product-name">Vans Authentic 44 Dx Classic White</p>
+          </td>
+          <td>
+            <p>$35.99</p>
+          </td>
+          <td>
+            <button>-</button>
+            <p class="quantity">1</p>
+            <button>+</button>
+          </td>
+          <td>
+            <p>$35.99</p>
+          </td>
+        </tr>
+        <tr class="product">
+          <td>
+            <i class="fa-solid fa-circle-xmark"></i>
+            <img src="./images/product.jpg" alt="product-image" width="60px" height="60px">
+            <p class="product-name">Vans Authentic 44 Dx Classic White</p>
+            <p class="product-detail">Size: Large</p>
+          </td>
+          <td>
+            <p>$35.99</p>
+          </td>
+          <td>
+            <button>-</button>
+            <p class="quantity">1</p>
+            <button>+</button>
+          </td>
+          <td>
+            <p>$35.99</p>
+          </td>
+        </tr>
+        <tr class="product">
+          <td>
+            <i class="fa-solid fa-circle-xmark"></i>
+            <img src="./images/product.jpg" alt="product-image" width="60px" height="60px">
+            <p class="product-name">Vans Authentic 44 Dx Classic White</p>
+          </td>
+          <td>
+            <p>$35.99</p>
+          </td>
+          <td>
+            <button>-</button>
+            <p class="quantity">1</p>
+            <button>+</button>
+          </td>
+          <td>
+            <p>$35.99</p>
+          </td>
+        </tr>
+        <tr class="product">
+          <td>
+            <i class="fa-solid fa-circle-xmark"></i>
+            <img src="./images/product.jpg" alt="product-image" width="60px" height="60px">
+            <p class="product-name">Vans Authentic 44 Dx Classic White</p>
+          </td>
+          <td>
+            <p>$35.99</p>
+          </td>
+          <td>
+            <button>-</button>
+            <p class="quantity">1</p>
+            <button>+</button>
+          </td>
+          <td>
+            <p>$35.99</p>
+          </td>
+        </tr>
+      </table>
+      <div class="checkout-cart">
+        <div class="coupon">
+          <input type="text" placeholder="Enter Coupon Code Here">
+          <button>APPLY</button>
+        </div>
+        <div class="cart-button">
+          <button class="update-button">UPDATE CART</button>
+          <button class="checkout-button"><i class="fa-solid fa-circle-check"></i>CHECKOUT</button>
+        </div>
+      </div>
+      <div class="shipping-total-cart">
+        <div class="calculate-shipping">
+          <p>CALCULATE SHIPPING</p>
+          <input list="countries" name="country" placeholder="Select your country">
+          <datalist id="countries">
+            <option value="Vietnam">
+            <option value="China">
+            <option value="America">
+            <option value="Japan">
+            <option value="England">
+          </datalist>
+          <br>
+          <input type="text" name="state" placeholder="State/ Country">
+          <input type="text" name="postcode" placeholder="Postcode/ Zip">
+          <br>
+          <button>UPDATE TOTALS</button>
+        </div>
+        <div class="total-cart">
+          <p>CART TOTALS</p>
+          <table>
+            <tr>
+              <th>Subtotal</th>
+              <td>$1285.99</td>
+            </tr>
+            <tr>
+              <th>Shipping and Handling</th>
+              <td>
+                <input type="radio" id="flat-rate-1" name="shipping"><label>Flat rate: $3.99</label>
+                <br>
+                <input type="radio" id="freeship" name="shipping"><label>Free shipping</label>
+                <br>
+                <input type="radio" id="flat-rate-2" name="shipping"><label>Flat rate: $12.99</label>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Total</th>
+              <td>$2000.99</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="suggest-product">
+        <p class="suggest-product-intro">YOU MAY BE INTERESTED IN</p>
+        <ul>
+          <li>
+            <img src="./images/product.jpg" alt="product-image">
+            <p>Vans</p>
+            <p>$35.99 - $129.99</p>
+          </li>
+          <li>
+            <img src="./images/product.jpg" alt="product-image">
+            <p>Vans</p>
+            <p>$35.99 - $129.99</p>
+          </li>
+          <li>
+            <img src="./images/product.jpg" alt="product-image">
+            <p>Vans</p>
+            <p>$35.99 - $129.99</p>
+          </li>
+          <li>
+            <img src="./images/product.jpg" alt="product-image">
+            <p>Vans</p>
+            <p>$35.99 - $129.99</p>
+          </li>
+          <li>
+            <img src="./images/product.jpg" alt="product-image">
+            <p>Vans</p>
+            <p>$35.99 - $129.99</p>
+          </li>
+          <li>
+            <img src="./images/product.jpg" alt="product-image" width="160px" height="200px">
+            <p>Vans</p>
+            <p>$35.99 - $129.99</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <div class="footer-top-content">
+        <div class="footer-logo">
+          <img src="./images/footer-logo.png">
+          <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,
+            nisi elit
+            consequat ipsum, nec sagittis sem nibh id elit.</p>
+        </div>
+        <div class="contact">
+          <p class="footer-title">CONTACT<i class="fa-solid fa-caret-down"></i></p>
+          <div class="contact-detail">
+            <p><i class="fa-solid fa-location-dot"></i>Address:<br>908 New Hampshire Avenue Northwest #100, Washington,
+              DC 20037,
+              United States</p>
+            <p><i class="fa-solid fa-headphones"></i>Phone: +1 916-85-2235</p>
+            <p><i class="fa-solid fa-fax"></i>Fax: +1 916-875-2235</p>
+            <p><i class="fa-solid fa-envelope"></i>Email: <span>info@domain.ltd</span></p>
+            <p><i class="fa-solid fa-globe"></i>Website: <span>www.codex-themes.com</span></p>
+          </div>
+        </div>
+        <div class="recently-post">
+          <p class="footer-title">RECENTLY POSTS<i class="fa-solid fa-caret-down"></i></p>
+          <ul>
+            <li>
+              <img src="./images/product.jpg" alt="avatar">
+              <div class="post-content">
+                <p>Proin gravida nibh vel vel hihi ...</p>
+                <p>
+                  <span>27 Dec 2015</span>
+                  <span class="no-comment"><i class="fa-solid fa-comments"></i> &nbsp 0</span>
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src="./images/product.jpg" alt="avatar">
+              <div class="post-content">
+                <p>Proin gravida nibh vel vel hihi ...</p>
+                <p>
+                  <span>27 Dec 2015</span>
+                  <span><i class="fa-solid fa-comments"></i> &nbsp 14</span>
+                </p>
+              </div>
+            </li>
+            <li>
+              <img src="./images/product.jpg" alt="avatar">
+              <div class="post-content">
+                <p>Proin gravida nibh vel vel hihi ...</p>
+                <p>
+                  <span>27 Dec 2015</span>
+                  <span class="no-comment"><i class="fa-solid fa-comments"></i> &nbsp 0</span>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="useful-link">
+          <p class="footer-title">USEFUL LINKS<i class="fa-solid fa-caret-down"></i></p>
+          <ul>
+            <li><a>General Information For Users</a></li>
+            <li><a>Interactive Fairy Tales</a></li>
+            <li><a>Official Storybook Maker Website</a></li>
+            <li><a>Everyday Mathematics Links</a></li>
+            <li><a>Basic Knowledge and Experience</a></li>
+          </ul>
+        </div>
+        <div class="email-us">
+          <p class="footer-title">EMAIL US<i class="fa-solid fa-caret-down"></i></p>
+          <div class="write-email">
+            <input type="text" name="your-name" placeholder="Your name"><i class="fa-solid fa-user"></i><br>
+            <input type="email" name="your-email" placeholder="Your email"><i class="fa-solid fa-envelope"></i><br>
+            <input type="textarea" name="your-message" placeholder="Your message"><br>
+            <button type="submit">SEND MESSAGE</button>
+          </div>
+        </div>
+        <div class="project">
+          <p class="footer-title">PROJECTS / CILENTS?<i class="fa-solid fa-caret-down"></i></p>
+          <div class="project-list">
+            <img src="./images/product.jpg">
+            <img src="./images/product.jpg">
+            <img src="./images/product.jpg">
+            <img src="./images/product.jpg">
+            <img src="./images/product.jpg">
+            <img src="./images/product.jpg">
+          </div>
+          <!-- <div class="project-number">
+            <span class="dot-active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div> -->
+        </div>
+        <div class="flickr-feed">
+          <p class="footer-title">FLICKR FEED<i class="fa-solid fa-caret-down"></i></p>
+          <div class="feed-list">
+            <img src="./images/product.jpg">
+            <img src="./images/product.jpg">
+            <img src="./images/product.jpg">
+            <img src="./images/product.jpg">
+            <img src="./images/product.jpg">
+            <img src="./images/product.jpg">
+            <img src="./images/product.jpg">
+            <img src="./images/product.jpg">
+            <img src="./images/product.jpg">
+          </div>
+        </div>
+        <div class="newsletter">
+          <p class="footer-title">NEWSLETTER<i class="fa-solid fa-caret-down"></i></p>
+          <div class="newsletter-detail">
+            <p>Subscribe to our MailChimp newsletter and stay up to date with all events coming straight in your
+              mailbox:</p>
+            <input type="email" name="your-email-address" placeholder="Your email address"><button>></button>
+            <p><span>* </span>Personal information will be encrypted</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <p class="copyright">© Copyright 2015 <span>CodexThemes</span></p>
+        <ul>
+          <li><a href="#">Support</a><span>|</span></li>
+          <li><a href="#">Contact Us</a><span>|</span></li>
+          <li><a href="#">Disclaimer</a><span>|</span></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-pinterest-p"></i></a> 
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+</body>
+
+</html>

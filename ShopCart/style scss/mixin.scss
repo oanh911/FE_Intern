@@ -1,0 +1,45 @@
+@import "./variales.scss";
+
+@mixin flex-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin button-style {
+  height: 50px;
+  border-radius: 3px;
+  border: 2px solid #00bcd4;
+  font-size: map-get($font-sizes, "medium");
+  font-weight: map-get($font-weights, "bold");
+  letter-spacing: 1px;
+  font-family: $fontFamilySecond;
+}
+
+@mixin input-style {
+  border-radius: 3px;
+  border: 1px solid #dfe5e8;
+  font-family: $fontFamily;
+  font-weight: map-get($font-weights, "regular");
+  font-size: map-get($font-sizes, "normal");
+  color: #99a9b5;
+  padding: 0 20px;
+}
+
+@mixin input-focus {
+  outline: none !important;
+  color: #99a9b5;
+  border: 0.5px solid #00bcd4;
+}
+
+@mixin checkout-cart-title {
+  font-size: map-get($font-sizes, "large");
+  letter-spacing: 2px;
+  line-height: 50px;
+  color: #3c3950;
+  font-weight: map-get($font-weights, "light");
+  font-family: $fontFamilySecond;
+  margin-bottom: 50px;
+}
