@@ -8,10 +8,17 @@ const slides = document.getElementsByTagName("img");
 const dots = document.getElementsByClassName("dot");
 
 let slideIndex = 0;
-var timeout;
+let timeout;
 
 makeSlideShow(slideAddresses);
 
+prevSlideChangeButton.addEventListener("click", () => {
+    changeSlideByButton(-1);
+});
+
+nextSlideChangeButton.addEventListener("click", () => {
+    changeSlideByButton(1);
+});
 
 function showAllSlide(slideArray) {
     let slidesHtml = "";
@@ -25,17 +32,16 @@ function showAllSlide(slideArray) {
 }
 
 function showSlide(){
-    let i;
-    for (i = 0; i < slides.length; i++){
+    for (let i = 0; i < slides.length; i++){
         slides[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
     }
     slides[slideIndex].style.display = "block";  
-    dots[slideIndex].className += " active";
+    dots[slideIndex].classList.add("active");
     timeout = setTimeout(() => {
-    changeSlideIndex(1);
+        changeSlideIndex(1);
     }, 5000);  
 }
 
